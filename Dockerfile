@@ -5,5 +5,5 @@ LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 
 RUN apt-get update && apt-get install -y \
 	g++ \
-	libmpdclient \
+	libmpdclient 2.9 \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
