@@ -1,4 +1,4 @@
-FROM mesonbuild/bionic AS build
+FROM debian AS build
 LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 
 #docker pull mesonbuild/bionic
