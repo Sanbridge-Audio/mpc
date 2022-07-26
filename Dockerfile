@@ -6,6 +6,7 @@ LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 RUN apt-get update && apt-get install -y \
 	g++ \
 	libmpdclient-dev \
+	ninja-build \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 	
 ARG MPC_VERSION=0.34
