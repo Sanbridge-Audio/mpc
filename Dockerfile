@@ -18,6 +18,6 @@ RUN tar xf /tmp/mpc-0.34.tar.xz
 WORKDIR mpc-0.34
 
 #Installation of MPC
-#RUN meson . output
-#RUN ninja -C output
-#RUN ninja -C output install
+RUN meson . output
+RUN ninja -C output
+RUN ninja -C output install
