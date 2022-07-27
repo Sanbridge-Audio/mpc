@@ -1,4 +1,5 @@
-FROM debian:stable-slim AS build
+FROM --platform=$BUILDPLATFORM debian:stable-slim
+#FROM debian:stable-slim AS build
 LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 
 #docker pull mesonbuild/bionic
