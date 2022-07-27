@@ -26,8 +26,8 @@ RUN meson . output
 RUN ninja -C output
 RUN ninja -C output install
 
-FROM debian:stable-slim AS final
+#FROM debian:stable-slim AS final
 
-RUN mkdir /usr/local/bin/mpc
+#RUN mkdir /usr/local/bin/mpc
 
-COPY --from=build /usr/local/bin/mpc /usr/local/bin/mpc
+#COPY --from=build /usr/local/bin/mpc /usr/local/bin/mpc
