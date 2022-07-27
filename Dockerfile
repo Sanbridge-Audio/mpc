@@ -32,3 +32,7 @@ FROM debian:stable-slim AS final
 #RUN mkdir -p /usr/local/bin/mpc
 
 COPY --from=build /usr/local/bin/mpc /usr/local/bin
+
+RUN apt-get update && apt-get install -y \
+	libmpdclient-dev \
+	&& apt-get clean && rm -fR /var/lib/apt/lists/*
