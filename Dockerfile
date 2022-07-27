@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM debian:stable-slim
+FROM --platform=$BUILDPLATFORM debian
 #FROM debian:stable-slim AS build
 LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 
