@@ -15,7 +15,7 @@ ADD https://www.musicpd.org/download/mpc/0/mpc-0.34.tar.xz /tmp
 #ADD https://www.musicpd.org/download/mpc/0/mpc-${MPC_VERSION}.tar.xz /tmp
 RUN tar xf /tmp/mpc-0.34.tar.xz
 
-#WORKDIR mpc-0.34/build
+WORKDIR mpc-0.34
 
 #Installation of MPC
 #RUN meson . output
