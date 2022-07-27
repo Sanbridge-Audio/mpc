@@ -1,5 +1,5 @@
 FROM debian:stable-slim AS build
-FROM debian:stable-slim AS final
+
 LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 
 #docker pull mesonbuild/bionic
@@ -26,7 +26,7 @@ RUN meson . output
 RUN ninja -C output
 RUN ninja -C output install
 
-FROM final
+FROM debian:stable-slim AS final
 
 RUN mkdir /usr/local/bin/mpc
 
