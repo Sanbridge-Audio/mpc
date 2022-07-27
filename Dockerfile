@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
 	meson \
 	ninja-build \
 	xz-utils \
+	pkg-config \
+	git \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 	
 ARG MPC_VERSION=0.34
