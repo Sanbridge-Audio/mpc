@@ -6,6 +6,7 @@ LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
 RUN apt-get update && apt-get install -y \
 	g++ \
 	libmpdclient-dev \
+	meson \
 	ninja-build \
 	xz-utils \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
