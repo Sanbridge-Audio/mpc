@@ -38,4 +38,4 @@ RUN apt-get update && apt-get install -y \
 	iproute2 \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 	
-#CMD ["mpc", "--port=6600"]
+CMD ["mpc", "-h mpd"]
