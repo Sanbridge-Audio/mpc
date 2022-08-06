@@ -37,4 +37,4 @@ RUN apt-get update && apt-get install -y \
 	libmpdclient-dev \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 	
-CMD ["mpc", "--port=6600"]
+CMD ["mpc", "--host=192.168.1.198" "--port=6600"]
