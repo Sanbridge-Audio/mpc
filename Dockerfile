@@ -37,5 +37,5 @@ RUN apt-get update && apt-get install -y \
 	libmpdclient-dev \
 	iproute2 \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
-	
-CMD ["mpc", "-h mpd"]
+ENV MPD_HOST=mpd 	
+#CMD ["mpc", "-h mpd"]
