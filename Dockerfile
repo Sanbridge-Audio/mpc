@@ -36,3 +36,5 @@ COPY --from=build /usr/local/bin/mpc /usr/local/bin
 RUN apt-get update && apt-get install -y \
 	libmpdclient-dev \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
+	
+CMD ["mpc", "--port=6600"]
