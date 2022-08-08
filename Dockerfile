@@ -29,7 +29,7 @@ RUN ninja -C output
 RUN ninja -C output install
 
 FROM debian:stable-slim AS final
-
+ARG MPC_VERSION=0.34
 #WORKDIR $HOME
 #RUN mkdir -p /usr/local/bin/mpc
 
