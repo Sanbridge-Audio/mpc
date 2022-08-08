@@ -41,5 +41,5 @@ RUN apt-get update && apt-get install -y \
 	mosquitto-clients \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 ENV MPD_HOST=mpd 	
-ENV mpc={$MPC_VERSION}
+ENV mpc=$MPC_VERSION
 #CMD ["mpc", "-h mpd"]
