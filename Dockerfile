@@ -36,6 +36,7 @@ COPY --from=build /usr/local/bin/mpc /usr/local/bin
 RUN apt-get update && apt-get install -y \
 	libmpdclient-dev \
 	iproute2 \
+	mosquitto-clients \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 ENV MPD_HOST=mpd 	
-#CMD ["mpc"]
+#CMD ["mpc", "-h mpd"]
