@@ -1,3 +1,5 @@
+ARG MPC_VERSION=0.34
+
 FROM debian:stable-slim AS build
 
 LABEL maintainer="Matt Dickinson <matt@sanbridge.org>"
@@ -14,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 	git \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 	
-ARG MPC_VERSION=0.34
+#ARG MPC_VERSION=0.34
 ADD https://www.musicpd.org/download/mpc/0/mpc-0.34.tar.xz /tmp
 #ADD https://www.musicpd.org/download/mpc/0/mpc-${MPC_VERSION}.tar.xz /tmp
 RUN tar xf /tmp/mpc-0.34.tar.xz
@@ -39,4 +41,5 @@ RUN apt-get update && apt-get install -y \
 	mosquitto-clients \
 	&& apt-get clean && rm -fR /var/lib/apt/lists/*
 ENV MPD_HOST=mpd 	
+ENV mpc=MPC_VERSION
 #CMD ["mpc", "-h mpd"]
